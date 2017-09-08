@@ -91,7 +91,9 @@
             foreach (Item obj in item.Children)
             {
                 if (MainUtil.EncodeName(obj.DisplayName).Equals(itemName, StringComparison.OrdinalIgnoreCase) ||
-                    MainUtil.EncodeName(obj.Name).Equals(itemName, StringComparison.OrdinalIgnoreCase))
+                    MainUtil.EncodeName(obj.Name).Equals(itemName, StringComparison.OrdinalIgnoreCase) ||
+                    obj.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase) ||
+                    obj.DisplayName.Equals(itemName, StringComparison.OrdinalIgnoreCase))
                 {
                     return obj;
                 }
